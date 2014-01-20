@@ -15,6 +15,7 @@
 	body
 	{
 		background: #183026 url('../images/bg.jpg') no-repeat;
+		/*background-color:  #f1c40f;*/
 		background-size: cover;
 		background-position: center 0;
 		background-attachment: fixed;
@@ -1141,6 +1142,8 @@
 				font-weight: 600;
 				font-size: 2em;
 				letter-spacing: 10px;
+				margin: 0em auto 2em auto;
+				text-align: center;
 			}
 
 			#header header p
@@ -1151,7 +1154,7 @@
 				font-size: 1em;
 				text-transform: uppercase;
 				letter-spacing: 3px;
-				padding: 0;
+				padding: 0 3em;
 				margin-top: 0.35em;
 			}
 			
