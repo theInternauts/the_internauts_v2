@@ -1496,3 +1496,9 @@
 			clear: left;
 			margin-right: 30px;
 		}
+
+	#first a.image.full img {
+		position: absolute;
+		left: -280px;
+		top: 0px;
+	}
