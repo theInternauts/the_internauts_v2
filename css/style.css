@@ -54,8 +54,8 @@
 	
 	h3
 	{
-		font-size: 1em;
-		letter-spacing: 5px;
+		font-size: 0.7em;
+		letter-spacing: 2px;
 	}
 		
 	strong, b
@@ -1471,3 +1471,34 @@
 			{
 				opacity: 1.0;
 			}
+
+/*********************************************************************************/
+/* #first featured article                                                       */
+/*********************************************************************************/
+
+	#first h2 {
+		font-weight: bold;
+	}
+
+	#first h3:after {
+		content: '';
+		display: block;
+		border-bottom: 1px solid #000000;
+		margin: 4px 0 0.8em 0;
+	}
+
+	#first ul { 
+		text-align: right;
+	}			
+
+		#first ul li:nth-child(1), #first ul li:nth-child(2) {
+			float: left;
+			clear: left;
+			margin-right: 30px;
+		}
+
+	#first a.image.full img {
+		position: absolute;
+		left: -280px;
+		top: 0px;
+	}
