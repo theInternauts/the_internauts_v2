@@ -1521,7 +1521,7 @@
 /*********************************************************************************/
 
 	#second a.image.full img {
-		position: absolute;
-		left: -280px;
+		/*position: absolute;*/
+		left: 0px;
 		top: 0px;
 	}
