@@ -1527,4 +1527,12 @@
 		/*position: absolute;*/
 		left: 0px;
 		top: 0px;
+		display: none;
+	}
+
+	#second>a.image.full {
+		background-image: url('../images/fulls/FridgeFriend_4.png');
+		background-position: 0px -1px;
+		background-size: 101%;
+		background-repeat: no-repeat;
 	}
