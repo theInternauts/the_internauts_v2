@@ -320,3 +320,16 @@
 		left: 0px;
 		top: 0px;
 	}
+
+/*********************************************************************************/
+/* #second featured article                                                       */
+/*********************************************************************************/
+
+
+	#second>a.image.full {
+		background-image: none;
+	}
+	
+		#second a.image.full img {
+			display: block;
+		}
