@@ -207,6 +207,12 @@
 				letter-spacing: 6px;
 			}
 
+			#header header p
+			{
+				padding: 0em 2em;
+			}
+
+
 		#header footer
 		{
 			bottom: 4.5em;
@@ -329,7 +335,7 @@
 	#second>a.image.full {
 		background-image: none;
 	}
-	
+
 		#second a.image.full img {
 			display: block;
 		}
