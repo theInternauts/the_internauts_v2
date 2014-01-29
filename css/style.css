@@ -1538,10 +1538,10 @@
 	}
 
 /*********************************************************************************/
-/* #third featured article                                                       */
+/* #third and fourth featured article                                                       */
 /*********************************************************************************/
 
-	#third a.image.full img {
+	#third a.image.full img, #fourth a.image.full img {
 		/*position: absolute;*/
 		width: 100%;
 	}
