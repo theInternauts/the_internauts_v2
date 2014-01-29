@@ -1527,14 +1527,16 @@
 /* #second featured article                                                       */
 /*********************************************************************************/
 
-	#second a.image.full img {
+	#second a.image.full img 
+	{
 		/*position: absolute;*/
 		left: 0px;
 		top: 0px;
 		display: none;
 	}
 
-	#second>a.image.full {
+	#second>a.image.full 
+	{
 		background-image: url('../images/fulls/FridgeFriend_4.png');
 		background-position: 0px -1px;
 		background-size: 101%;
@@ -1545,7 +1547,8 @@
 /* #third and fourth featured article                                                       */
 /*********************************************************************************/
 
-	#third a.image.full img, #fourth a.image.full img {
+	#third a.image.full img, #fourth a.image.full img 
+	{
 		/*position: absolute;*/
 		width: 100%;
 	}
