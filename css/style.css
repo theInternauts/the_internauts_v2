@@ -1503,17 +1503,20 @@
 /* #first featured article                                                       */
 /*********************************************************************************/
 
-	#first ul { 
+	#first ul 
+	{ 
 		text-align: right;
 	}			
 
-		#first ul li:nth-child(1), #first ul li:nth-child(2) {
+		#first ul li:nth-child(1), #first ul li:nth-child(2) 
+		{
 			float: left;
 			clear: left;
 			margin-right: 30px;
 		}
 
-	#first a.image.full img {
+	#first a.image.full img 
+	{
 		position: absolute;
 		/*left: -280px;*/
 		left: -230px;
