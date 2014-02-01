@@ -191,7 +191,7 @@
 		$('#contact_form').on('submit', function(event){
 			event.preventDefault();
 			$.ajax({
-				url: "scripts/send_mail.php",
+				url: $(this).attr('action'),
 				method: "post",
 				data: $(this).serialize()
 			}).done(function() {
