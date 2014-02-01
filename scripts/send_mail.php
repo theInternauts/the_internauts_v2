@@ -5,12 +5,12 @@
 	$mail_from = "$email"; 
 	
 	$header = "from: $name <$mail_from>";
-	$to ='cricketw@WeAreTheInterauts.com'
+	$to ='cricketw@WeAreTheInternauts.com'
 
 	$send_contact = mail($to,$subject,$message,$header);
 
 	if($send_contact){
-		echo "We've recived your contact information";
+		echo "We've recieved your contact information";
 	} else {
 		echo "ERROR";
 	}
