@@ -176,3 +176,28 @@
 				$('.gallery').poptrox(_settings.poptrox);
 
 		});
+
+/*********************************************************************************/
+/* Internauts JS                                                                 */
+/*********************************************************************************/
+
+	$(function(){
+		$('#form-submit-btn').on('click', function(event){
+			event.preventDefault();
+			var form = $(event.target).closest('form')
+			form.trigger('submit')			
+		})
+
+		$('#contact_form').on('submit', function(event){
+			event.preventDefault();
+			$.ajax({
+				url: "scripts/send_mail.php",
+				method: "post",
+				data: $(this).serialize()
+			}).done(function() {
+			    console.log( "AJAX success" );
+			}).fail(function() {
+			    console.log( "error" );
+			});
+		})
+	})
