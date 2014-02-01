@@ -196,8 +196,16 @@
 				data: $(this).serialize()
 			}).done(function() {
 			    console.log( "AJAX success" );
+			    $('#contact_form input, #contact_form textarea').val('')
+			    $('article#contact').prepend('<h3 class="form-msg success">Success: Message submitted.</h3>')
+			    $('.form-msg').hide().fadeIn(2000, function(){
+			    	$(this).fadeOut(2000)
+			    })
 			}).fail(function() {
 			    console.log( "error" );
+			    $('#contact_form input, #contact_form textarea').val('')
+			    $('article#contact').prepend('<h3 class="form-msg error">error: Message was not sent.</h3>')
+			    $('.form-msg').hide().fadeIn(2000)
 			});
 		})
 	})

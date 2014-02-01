@@ -1575,3 +1575,29 @@
 	{
 		padding-left: 1em;
 	}
+
+/*********************************************************************************/
+/* messages                                                                      */
+/*********************************************************************************/
+
+	.form-msg
+	{
+		display: block;
+		padding: 0.5em;
+		border: 2px solid;
+		margin-bottom: 2em;
+	}
+
+	.form-msg.error
+	{
+		border-color: #800;
+		color: #800;
+		background-color: #FDD;
+	}
+
+	.form-msg.success
+	{
+		border-color: #F09;
+		color: #F90;
+		background-color: #FEA;
+	}
