@@ -199,7 +199,9 @@
 			    $('#contact_form input, #contact_form textarea').val('')
 			    $('article#contact').prepend('<h3 class="form-msg success">Success: Message submitted.</h3>')
 			    $('.form-msg').hide().fadeIn(2000, function(){
-			    	$(this).fadeOut(2000)
+			    	$(this).fadeOut(2000, function(){
+			    		$(this).remove()
+			    	})
 			    })
 			}).fail(function() {
 			    console.log( "error" );
