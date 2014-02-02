@@ -279,8 +279,8 @@
 		
 			ul.actions li
 			{
-				display: inline-block;
-				margin: 0 0 0 0.5em;
+				/*display: inline-block;
+				margin: 0 0 0 0.5em;*/
 			}
 			
 			ul.actions li:first-child
@@ -1588,16 +1588,30 @@
 		margin-bottom: 2em;
 	}
 
-	.form-msg.error
-	{
-		border-color: #800;
-		color: #800;
-		background-color: #FDD;
-	}
+		.form-msg.error
+		{
+			border-color: #800;
+			color: #800;
+			background-color: #FDD;
+		}
 
-	.form-msg.success
+		.form-msg.success
+		{
+			border-color: #F90;
+			color: #F90;
+			background-color: #FEA;
+		}
+
+	#s3capcha
 	{
-		border-color: #F90;
-		color: #F90;
-		background-color: #FEA;
+		margin-bottom: 1em;
 	}
+		#s3capcha div
+		{
+			display: inline-block;
+		}
+
+		#s3capcha p
+		{
+			margin-bottom: 0.2em;
+		}

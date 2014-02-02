@@ -182,6 +182,8 @@
 /*********************************************************************************/
 
 	$(function(){
+		$('#s3capcha').s3Capcha();
+
 		$('#form-submit-btn').on('click', function(event){
 			event.preventDefault();
 			var form = $(event.target).closest('form')
@@ -195,7 +197,7 @@
 				method: "post",
 				data: $(this).serialize()
 			}).done(function() {
-			    console.log( "AJAX success" );
+			    console.log( "send success" );
 			    $('#contact_form input, #contact_form textarea').val('')
 			    $('article#contact').prepend('<h3 class="form-msg success">Success: Message submitted.</h3>')
 			    $('.form-msg').hide().fadeIn(2000, function(){
@@ -203,9 +205,8 @@
 			    		$(this).remove()
 			    	})
 			    })
-			}).fail(function() {
-			    console.log( "error" );
-			    $('#contact_form input, #contact_form textarea').val('')
+			}).fail(function(response) {
+			    console.log( "send error: ", response );
 			    $('article#contact').prepend('<h3 class="form-msg error">error: Message was not sent.</h3>')
 			    $('.form-msg').hide().fadeIn(2000)
 			});

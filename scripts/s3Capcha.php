@@ -1,6 +1,6 @@
 ﻿<?php
-session_start();
-include("scripts/s3Config.php");
+// session_start();
+include("s3Config.php");
 $rand       = mt_rand(0,(sizeof($values)-1));
 shuffle($values);
 $s3Capcha = '<p>Verify that you are a human, please choose <strong>'.$values[$rand]."</strong></p>\n";

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <!--
 	Overflow 1.1 by HTML5 UP
@@ -173,7 +174,7 @@
 				<h2>Ask me anything</h2>
 				<p>You've got questions.  I've got answers.</p>
 			</header>
-			<form id="contact_form" method="post" action="scripts/send_mail.php">
+			<form id="contact_form" method="post" action="scripts/verify.php">
 				<div class="row half">
 					<div class="6u"><input type="text" class="text" name="name" placeholder="Name" /></div>
 					<div class="6u"><input type="text" class="text" name="email" placeholder="Email" /></div>
