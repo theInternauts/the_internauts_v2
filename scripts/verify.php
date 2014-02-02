@@ -20,14 +20,14 @@ function spamcheck($field)
 
 if($_POST['s3capcha'] == $_SESSION['s3capcha'] && $_POST['s3capcha'] != '') {
     unset($_SESSION['s3capcha']);
-    echo 'capcha success!/n';
+    
     if (isset($_REQUEST['email']))
 	{
 		//check if the email address is invalid
 		$mailcheck = spamcheck($_REQUEST['email']);
 		if ($mailcheck==FALSE)
 		{
-	    	echo "Invalid input";
+	    	echo '{"status":"false","message":"Invalid input"}';
 	    } else {
 	    	//send email
 			$subject = "A message from the Internauts contact form"; 
@@ -41,16 +41,17 @@ if($_POST['s3capcha'] == $_SESSION['s3capcha'] && $_POST['s3capcha'] != '') {
 			$send_contact = mail($to,$subject,$message,$header);
 
 			if($send_contact == true){
-				echo "We've recieved your contact information";
+				echo '{"status":"true","message":"Your message has been sent."}';
 			} else {
-				echo "SEND ERROR";
+				echo '{"status":"false","message":"Server unable to process message."}';
 			}
 	    }
 	} else {
-		echo "please fill in all fields";
+		echo '{"status":"false","message":"Please fill in all fields."}';
 	}
 } else {
-    echo 'capcha fail';
+    // echo 'capcha fail';
+    echo '{"status":"false","message":"Please answer the user challenge."}';
 }
 
 ?>

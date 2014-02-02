@@ -195,19 +195,29 @@
 			$.ajax({
 				url: $(this).attr('action'),
 				method: "post",
-				data: $(this).serialize()
-			}).done(function() {
-			    console.log( "send success" );
-			    $('#contact_form input, #contact_form textarea').val('')
-			    $('article#contact').prepend('<h3 class="form-msg success">Success: Message submitted.</h3>')
-			    $('.form-msg').hide().fadeIn(2000, function(){
-			    	$(this).fadeOut(2000, function(){
-			    		$(this).remove()
-			    	})
-			    })
-			}).fail(function(response) {
-			    console.log( "send error: ", response );
-			    $('article#contact').prepend('<h3 class="form-msg error">error: Message was not sent.</h3>')
+				data: $(this).serialize(),
+				dataType: 'json'
+			}).done(function(response) {
+				if(response.status == "true"){
+				    console.log( "send success: ", response.message );
+				    $('#contact_form input, #contact_form textarea').val('')
+				    $('article#contact').prepend('<h3 class="form-msg success">Success: '+ response.message +'</h3>')
+				    $('.form-msg').hide().fadeIn(2000, function(){
+				    	$(this).fadeOut(2000, function(){
+				    		$(this).remove()
+				    	})
+				    })
+			    } else {
+			    	console.log( "send error: ", response.message );
+			    	$('.form-msg').remove()
+				    $('article#contact').prepend('<h3 class="form-msg error">Send error: '+ response.message +'</h3>')
+				    $('.form-msg').hide().fadeIn(2000)
+			    }
+			    	
+			}).fail(function(error) {
+			    console.log( "send error: ", error );
+			    $('.form-msg').remove()
+			    $('article#contact').prepend('<h3 class="form-msg error">Server error: Message was not sent.</h3>')
 			    $('.form-msg').hide().fadeIn(2000)
 			});
 		})
